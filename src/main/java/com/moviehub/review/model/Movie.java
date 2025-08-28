@@ -1,0 +1,16 @@
+package com.moviehub.review.model;
+
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
+
+@Document
+@Data
+public class Movie {
+    private String movieId;
+    private String title;
+    private List<String> genres;
+    private Integer releasedYear;
+    private Double averageRating;
+}
