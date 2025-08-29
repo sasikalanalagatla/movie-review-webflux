@@ -1,4 +1,4 @@
-package com.moviehub.review.controller;
+package com.moviehub.review.api;
 
 import com.moviehub.review.dto.MovieRequestDto;
 import com.moviehub.review.dto.MovieResponseDto;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/movie")
+@RequestMapping("/api/movie")
 public class MovieController {
 
     @Autowired

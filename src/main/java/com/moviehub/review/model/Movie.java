@@ -13,7 +13,7 @@ public class Movie {
     @Id
     private String movieId;
     private String title;
-    private List<String> genres;
-    private Integer releasedYear;
+    private List<String> genre;
+    private Integer releaseYear;
     private Double averageRating;
 }

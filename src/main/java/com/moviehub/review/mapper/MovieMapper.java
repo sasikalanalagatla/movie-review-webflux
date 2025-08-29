@@ -9,18 +9,18 @@ public class MovieMapper {
     public static Movie toEntity(MovieRequestDto dto) {
         Movie movie = new Movie();
         movie.setTitle(dto.getTitle());
-        movie.setGenres(dto.getGenre());
-        movie.setReleasedYear(dto.getReleaseYear());
+        movie.setGenre(dto.getGenre());
+        movie.setReleaseYear(dto.getReleaseYear());
         movie.setAverageRating(0.0);
         return movie;
     }
 
     public static MovieResponseDto toDto(Movie movie) {
         MovieResponseDto dto = new MovieResponseDto();
-        dto.setId(movie.getMovieId());
+        dto.setMovieId(movie.getMovieId());
         dto.setTitle(movie.getTitle());
-        dto.setGenre(movie.getGenres());
-        dto.setReleaseYear(movie.getReleasedYear());
+        dto.setGenre(movie.getGenre());
+        dto.setReleaseYear(movie.getReleaseYear());
         dto.setAverageRating(movie.getAverageRating());
         return dto;
     }

@@ -43,8 +43,8 @@ public class MovieServiceImpl implements MovieService {
                 .switchIfEmpty(Mono.error(new MovieNotFoundException("Movie not found with movieId: " + movieId)))
                 .flatMap(existingMovie -> {
                     existingMovie.setTitle(movieRequestDto.getTitle());
-                    existingMovie.setGenres(movieRequestDto.getGenre());
-                    existingMovie.setReleasedYear(movieRequestDto.getReleaseYear());
+                    existingMovie.setGenre(movieRequestDto.getGenre());
+                    existingMovie.setReleaseYear(movieRequestDto.getReleaseYear());
                     return movieRepository.save(existingMovie);
                 })
                 .map(MovieMapper::toDto);

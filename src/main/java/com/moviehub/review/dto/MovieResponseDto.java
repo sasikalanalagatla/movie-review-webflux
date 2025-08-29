@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class MovieResponseDto {
-    private String id;
+    private String movieId;
     private String title;
     private List<String> genre;
     private Integer releaseYear;
